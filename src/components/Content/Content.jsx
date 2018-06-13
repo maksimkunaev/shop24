@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Content.css'
+import cn from 'classnames';
 
 class Content extends Component {
     constructor(props) {
@@ -7,9 +8,9 @@ class Content extends Component {
         this.state = {
             items: [],
             promocode: '123456',
-            visible: 0,
+            visible: 'hidden',
             valueInputPromoCode: '',
-            discount: 1800
+            discount: 0
         }
     }
 
@@ -43,7 +44,13 @@ class Content extends Component {
         const { promocode, valueInputPromoCode } = this.state;
         if (promocode === valueInputPromoCode) {
             this.setState({
-                visible: 1
+                visible: 'visible',
+                discount: 1800
+            })
+        } else {
+            this.setState({
+                visible: 'visible',
+                discount: 0
             })
         }
     }
@@ -105,6 +112,9 @@ class Content extends Component {
         newItems.splice(i, 1);
         this.calculateAmount(newItems);
     }
+    makeOrder() {
+
+    }
 
     renderCards() {
         const { items } = this.state;
@@ -144,12 +154,18 @@ class Content extends Component {
 
     renderPromoCode() {
         const { visible, valueInputPromoCode, totalPrice, discount } = this.state;
+        let classes;
+        let totalPriceWhitPromo = totalPrice;
 
-        let totalPriceWhitPromo = visible ? (totalPrice - discount) : totalPrice;
+        if (visible === 'visible') {
+            classes = cn('content__visible-promocode');
+            totalPriceWhitPromo = totalPrice - discount;
+        }   else {
+            classes = cn('content__invisible-promocode')
+        }
 
         if (totalPriceWhitPromo < 0) totalPriceWhitPromo = 0;
 
-        console.log(discount)
         return <div className='content__promocode'>
             <div className='content__input-promocode'>
                 <div className='content__have-promocode'>Есть промокод?</div>
@@ -165,21 +181,17 @@ class Content extends Component {
 
             <div className='content__titles-promocode'>
                 <div className='content__amount'>Сумма заказа:</div>
-                { visible
-                        ? <div className='content__visible-promocode'>Промокод:</div>
-                        : ''
-                 }
+                <div className={classes}>Промокод:</div>
 
                 <div className='content__amount-total'>Всего:</div>
             </div>
 
             <div className='content__total-amount'>
                 <div>{totalPrice}</div>
-                { visible
-                    ? <div className='content__visible-promocode' visible={false}>{discount}</div>
-                    : ''
-                }
+                <div className={classes}>{discount}</div>
                 <div>{totalPriceWhitPromo}</div>
+                <button className='content__button_make-order'
+                    onClick={this.makeOrder.bind(this)}>Оформить заказ</button>
             </div>
         </div>
     }
