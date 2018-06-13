@@ -5,8 +5,7 @@
     height: 100%;
 }
 .content {
-    /*border: 1px solid #ccc;*/
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
     box-sizing: border-box;
     align-items: center;
@@ -14,11 +13,11 @@
 .content__header {
     background-color: #fff;
     width: 100%;
-    height: 40px;
+    height: 70px;
     display: flex;
     justify-content: center;
     position: relative;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #3e3e3e;
 }
 
 .content__header-title {
@@ -29,11 +28,85 @@
 }
 .content__items {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 42px;
+}
+.content__items_titles {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 64px;
+}
+.content__items_title,
+.content__items_title-description,
+.content__items_title-quantity,
+.content__items_title-price,
+.content__items_title-delete {
+    flex: 1;
+}
+.content__items_title-description {
+    flex: 2;
 }
 
+.content__items_title-quantity,
+.content__items_title-price,
+.content__items_card-quantity,
+.content__items_card-price {
+    display: flex;
+    justify-content: center;
+}
+
+.content__items_title-delete,
+.content__items_card-delete {
+    display: flex;
+    justify-content: flex-end;
+}
 .content__items_card {
-    height: 200px;
+    height: 180px;
     width: 100%;
     border: 1px solid #ccc;
+    display: flex;
 }
+
+.content__items_card-image,
+.content__items_card-description,
+.content__items_card-quantity,
+.content__items_card-price,
+.content__items_card-delete {
+    height: 100%;
+    flex: 1;
+}
+
+.content__items_card-description {
+    flex: 2;
+}
+
+.content_card-title,
+.content_card-code {
+    margin-bottom: 15px;
+}
+
+.content_card-code {
+    font-size: 15px;
+    color: #3f3f3f;
+}
+
+.content__card-change-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    width: 50px;
+    font-size: 18px;
+}
+
+.content__card-quantity-plus,
+.content__card-quantity-minus{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+ }
+
+.content__card-quantity-minus {
+    margin-right: -14px;
+}
+

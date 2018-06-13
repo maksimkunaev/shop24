@@ -18,7 +18,7 @@ div {
 .header__main_content,
 .header__category_content,
 .header__tabs_content {
-    width: 800px;
+    width: 1000px;
     height: 100%;
     margin: 0 auto;
     display: flex;
@@ -28,7 +28,7 @@ div {
 
 .header {
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .header__links {
@@ -77,6 +77,8 @@ div {
 .header__category {
     height: 52px;
     background-color: #f8f8f8;
+    border-bottom: 1px solid #a2a2a2;
+    border-top: 1px solid #a2a2a2;
 }
 
 .header__category_clothes,
@@ -102,6 +104,8 @@ div {
 .header__tabs {
     height: 42px;
     background-color: #fff;
+    border-bottom: 1px solid #a2a2a2;
+    /*border-top: 1px solid #a2a2a2;*/
 }
 
 .header__tabs_woman,
