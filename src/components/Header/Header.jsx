@@ -24,7 +24,7 @@ class Header extends Component {
         super(props);
         this.state = {
             searchInput: '',
-            items: [1,2,3,4],
+            items: props.itemsFromTrash,
             activeCategory: 'clothes',
             activeTab: ''
         }
@@ -75,7 +75,8 @@ class Header extends Component {
                     `header__tabs_${item.id}`,
                     { choosen__tab: this.state.activeTab === item.id }
                 )}
-                onClick={this.goToTab.bind(this, item.id)}>
+                onClick={this.goToTab.bind(this, item.id)}
+                key={item.id}>
                     {item.name}</div>)}
         </div>
     }

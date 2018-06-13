@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
 import './Content.css'
 
-const items = [
-    {code: '82039-11', title: 'Платье-миди с расклешенной юбкой', size: 44, color: 'синий', price: 2450, image: './image/dress1.jpg'},
-    {code: '13524-01', title: 'Туфли женские украшенные кружевными вставками', size: 38, color: 'черный', price: 2450, image: './image/dress2.jpg'},
-    {code: '75039', title: 'Платье-миди', size: 44, color: 'белый', price: 2450, image: './image/dress3.jpg'},
-    {code: '75039', title: 'Платье-миди', size: 46, color: 'белый', price: 2450, image: './image/dress4.jpg'},
-];
-
 class Content extends Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            items: props.itemsFromTrash
         }
     }
 
     renderCards() {
+        const { items } = this.state;
 
+        return <div className='content__items'>
+            {items.map((item, i) => <div
+                key={item.id}
+                className='content__items_card'
+                >
+                {item.title}
+            </div>)}
+        </div>
     }
 
     render() {
+        const items = this.renderCards();
+
         return (
             <div className='content'>
                 <div className='content__header'>
@@ -28,11 +32,7 @@ class Content extends Component {
                        Ваша корзина
                    </span>
                 </div>
-                <div className='content__items'>
-                    {items.map((item, i) => <div className='content__items_card'>
-
-                    </div>)}
-                </div>
+                { items }
                 <div className='content__promocode'>
                     Промокод
                 </div>
