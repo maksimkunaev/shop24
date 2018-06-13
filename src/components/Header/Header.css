@@ -11,6 +11,7 @@ div {
     margin: 0 auto;
     align-items: center;
     cursor: pointer;
+    font-family: sans-serif;
 }
 
 .header__links_content,
@@ -84,7 +85,7 @@ div {
 .header__category_beauty,
 .header__category_household,
 .header__category_kitchen {
-    padding-right: 15px;
+    margin-right: 15px;
 }
 
 .header__category_clothes {}
@@ -94,13 +95,18 @@ div {
 .header__category_household {}
 .header__category_kitchen {}
 
-.choosen_header__category {
+.choosen__tab {
     border-bottom: 1px solid red;
 }
 
 .header__tabs {
     height: 42px;
     background-color: #fff;
+}
+
+.header__tabs_woman,
+.header__tabs_man {
+    margin-right: 15px;
 }
 
 .header__links_phone,

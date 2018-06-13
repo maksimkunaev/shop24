@@ -12,6 +12,12 @@ const categories = [
     { id: `kitchen`, name: `Товары для кухни` },
 ];
 
+const tabs = [
+    { id: `woman`, name: `Женская одежда` },
+    { id: `man`, name: `Мужская одежда` },
+    { id: `ornamentation`, name: `Аксессуары` },
+];
+
 class Header extends Component {
 
     constructor(props) {
@@ -20,6 +26,7 @@ class Header extends Component {
             searchInput: '',
             items: [1,2,3,4],
             activeCategory: 'clothes',
+            activeTab: ''
         }
     }
 
@@ -30,9 +37,15 @@ class Header extends Component {
         })
     }
 
-    goToTab(id){
+    goToCategory(id){
         this.setState({
             activeCategory: id
+        })
+    }
+
+    goToTab(id){
+        this.setState({
+            activeTab: id
         })
     }
 
@@ -44,9 +57,9 @@ class Header extends Component {
                 return <div
                     className={cn(
                         `header__category_${item.id}`,
-                        { choosen_header__category: this.state.activeCategory === item.id }
+                        { choosen__tab: this.state.activeCategory === item.id }
                     )}
-                    onClick={this.goToTab.bind(this, item.id)}
+                    onClick={this.goToCategory.bind(this, item.id)}
                     key={i}>
                     {item.name}
                 </div>
@@ -54,9 +67,23 @@ class Header extends Component {
         </div>
     }
 
+    renderTabs() {
+
+        return <div className='header__tabs_content'>
+            { tabs.map( item => <div
+                className={cn(
+                    `header__tabs_${item.id}`,
+                    { choosen__tab: this.state.activeTab === item.id }
+                )}
+                onClick={this.goToTab.bind(this, item.id)}>
+                    {item.name}</div>)}
+        </div>
+    }
+
     render() {
         const { searchInput, items } = this.state;
-        const tabs = this.renderPagination();
+        const categories = this.renderPagination();
+        const tabs = this.renderTabs();
 
         return (
             <div className='header'>
@@ -90,14 +117,13 @@ class Header extends Component {
                </div>
 
                <div className='header__category'>
-                { tabs }
+                { categories }
                </div>
 
                <div className='header__tabs'>
-                    <div className='header__tabs_content'>
-                    header__tabs_content
-                    </div>
-                </div>
+                { tabs }
+               </div>
+
             </div>
         )
     }
