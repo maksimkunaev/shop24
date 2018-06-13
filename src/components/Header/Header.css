@@ -1,0 +1,101 @@
+div {
+    /*border: 1px solid;*/
+}
+
+.header,
+.header__links,
+.header__main,
+.header__category,
+.header__tabs {
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.header__links_content,
+.header__main_content,
+.header__category_content,
+.header__tabs_content {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.header {
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.header__links {
+    height: 50px;
+    background-color: #e4e4e4;
+}
+
+
+.header__links_content {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__main_content {
+    justify-content: space-between;
+}
+
+.header__main_left,
+.header__main_right {
+    display: flex;
+}
+
+.header__main_left {
+    justify-content: flex-start;
+}
+
+.header__main_shop24,
+.header__main_account {
+    padding-right: 30px;
+}
+
+.header__main_right {
+    justify-content: flex-end;
+}
+
+
+
+.header__main {
+    height: 86px;
+    background-color: #fff;
+}
+
+.header__category {
+    height: 52px;
+    background-color: #f8f8f8;
+}
+
+.header__tabs {
+    height: 42px;
+    background-color: #fff;
+}
+
+.header__links_phone,
+.header__links_stars,
+.header__links_youtube,
+.header__links_live {
+}
+
+.header__links_phone {
+    flex: 1;
+}
+.header__links_stars {
+    padding-right: 12px;
+}
+
+.header__links_youtube {
+    padding-right: 12px;
+}
+
+.header__links_live {
+
+}
