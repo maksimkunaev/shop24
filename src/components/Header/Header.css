@@ -61,7 +61,10 @@ div {
 .header__main_right {
     justify-content: flex-end;
 }
-
+.header__main_searching {
+    border: none;
+    border-bottom: 1px solid;
+}
 
 
 .header__main {
@@ -73,6 +76,22 @@ div {
     height: 52px;
     background-color: #f8f8f8;
 }
+
+.header__category_clothes,
+.header__category_shoes,
+.header__category_ornamentation,
+.header__category_beauty,
+.header__category_household,
+.header__category_kitchen {
+    padding-right: 15px;
+}
+
+.header__category_clothes {}
+.header__category_shoes {}
+.header__category_ornamentation {}
+.header__category_beauty {}
+.header__category_household {}
+.header__category_kitchen {}
 
 .header__tabs {
     height: 42px;
