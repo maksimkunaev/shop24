@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import './Header.css';
 import bind from 'decko';
+import cn from 'classnames';
+
+const categories = [
+    { id: `clothes`, name: `Одежда и аксессуары` },
+    { id: `shoes`, name: `Обувь` },
+    { id: `ornamentation`, name: `Украшения` },
+    { id: `beauty`, name: `Красота и здоровье` },
+    { id: `household`, name: `Товары для дома` },
+    { id: `kitchen`, name: `Товары для кухни` },
+];
 
 class Header extends Component {
 
@@ -9,7 +19,7 @@ class Header extends Component {
         this.state = {
             searchInput: '',
             items: [1,2,3,4],
-            category: 'clothes',
+            activeCategory: 'clothes',
         }
     }
 
@@ -20,9 +30,33 @@ class Header extends Component {
         })
     }
 
+    goToTab(id){
+        this.setState({
+            activeCategory: id
+        })
+    }
+
+    renderPagination() {
+
+        return <div className='header__category_content'>
+            { categories.map( (item, i) =>{
+
+                return <div
+                    className={cn(
+                        `header__category_${item.id}`,
+                        { choosen_header__category: this.state.activeCategory === item.id }
+                    )}
+                    onClick={this.goToTab.bind(this, item.id)}
+                    key={i}>
+                    {item.name}
+                </div>
+            })}
+        </div>
+    }
 
     render() {
         const { searchInput, items } = this.state;
+        const tabs = this.renderPagination();
 
         return (
             <div className='header'>
@@ -56,28 +90,8 @@ class Header extends Component {
                </div>
 
                <div className='header__category'>
-                    <div className='header__category_content'>
-                        <div className='header__category_clothes'>
-                            Одежда и аксессуары
-                        </div>
-                        <div className='header__category_shoes'>
-                            Обувь
-                        </div>
-                        <div className='header__category_ornamentation'>
-                            Украшения
-                        </div>
-                        <div className='header__category_beauty'>
-                            Красота и здоровье
-                        </div>
-                        <div className='header__category_household'>
-                            Товары для дома
-                        </div>
-                        <div className='header__category_kitchen'>
-                            Товары для кухни
-                        </div>
-                    </div>
+                { tabs }
                </div>
-
 
                <div className='header__tabs'>
                     <div className='header__tabs_content'>

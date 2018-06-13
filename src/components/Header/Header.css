@@ -10,6 +10,7 @@ div {
     width: 100%;
     margin: 0 auto;
     align-items: center;
+    cursor: pointer;
 }
 
 .header__links_content,
@@ -92,6 +93,10 @@ div {
 .header__category_beauty {}
 .header__category_household {}
 .header__category_kitchen {}
+
+.choosen_header__category {
+    border-bottom: 1px solid red;
+}
 
 .header__tabs {
     height: 42px;
