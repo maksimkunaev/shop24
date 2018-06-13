@@ -118,7 +118,7 @@ class Content extends Component {
 
     renderCards() {
         const { items } = this.state;
-
+        console.log(items[0].image)
         return <div className='content__items'>
             <div className='content__items_titles'>
                 <div className='content__items_title'>Товар</div>
@@ -129,7 +129,9 @@ class Content extends Component {
             </div>
             {items.map((item, i) => <div className='content__items_card'
                 key={item.id}>
-                    <div className='content__items_card-image'>img</div>
+                    <div className='content__items_card-image'>
+
+                    </div>
                     <div className='content__items_card-description'>
                         <div className='content_card-title'>{item.title}</div>
                         <div className='content_card-code'>Код: {item.code}</div>
@@ -189,7 +191,7 @@ class Content extends Component {
             <div className='content__total-amount'>
                 <div>{totalPrice}</div>
                 <div className={classes}>{discount}</div>
-                <div>{totalPriceWhitPromo}</div>
+                <div className='content__total-amount-discount'>{totalPriceWhitPromo}</div>
                 <button className='content__button_make-order'
                     onClick={this.makeOrder.bind(this)}>Оформить заказ</button>
             </div>

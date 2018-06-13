@@ -79,6 +79,13 @@
     flex: 1;
 }
 
+.content__items_card-image {
+    width: 100px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: url('./dress1.jpg');
+}
 .content__items_card-description {
     flex: 2;
 }
@@ -157,9 +164,14 @@
 .content__visible-promocode {
     color: #ff6c00;
     visibility: visible;
+    margin-bottom: 38px;
 }
 
 .content__button_make-order {
     background-color: #ff6c00;
     color: #fff;
+}
+
+.content__total-amount-discount {
+    margin-bottom: 32px;
 }
