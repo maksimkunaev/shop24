@@ -9,8 +9,6 @@ const itemsFromTrash = [
     {code: '13524-01', title: 'Туфли женские украшенные кружевными вставками', size: 38, color: 'черный', price: 2450, image: './image/dress2.jpg'},
     {code: '75039', title: 'Платье-миди', size: 44, color: 'белый', price: 2450, image: './image/dress3.jpg'},
     {code: '75039', title: 'Платье-миди', size: 44, color: 'белый', price: 2450, image: './image/dress3.jpg'},
-    {code: '75039', title: 'Платье-миди', size: 44, color: 'белый', price: 2450, image: './image/dress3.jpg'},
-    {code: '75039', title: 'Платье-миди', size: 46, color: 'белый', price: 2450, image: './image/dress4.jpg'},
 ];
 
 class App extends Component {

@@ -5,7 +5,11 @@ class Content extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            items: []
+            items: [],
+            promocode: '123456',
+            visible: 0,
+            valueInputPromoCode: '',
+            discount: 1800
         }
     }
 
@@ -23,7 +27,25 @@ class Content extends Component {
 
         this.setState({
             items
+        });
+
+        this.calculateAmount(items);
+    }
+
+    onChahgePromoCode(e) {
+        e.preventDefault();
+        this.setState({
+            valueInputPromoCode: e.target.value
         })
+    }
+
+    inputPromoCode() {
+        const { promocode, valueInputPromoCode } = this.state;
+        if (promocode === valueInputPromoCode) {
+            this.setState({
+                visible: 1
+            })
+        }
     }
 
     reduceQuantity(id){
@@ -62,16 +84,26 @@ class Content extends Component {
 
     calculateAmount(newItems) {
         let newPrice = [];
+        let totalPrice = 0;
 
         newPrice = newItems.map( item => {
             item.total = item.price * item.quantity;
-
+            totalPrice += item.total;
             return item;
         });
 
         this.setState({
-            items: newPrice
+            items: newPrice,
+            totalPrice
         })
+    }
+
+    deleteItem(i) {
+        const { items } = this.state;
+        let newItems = [...items];
+
+        newItems.splice(i, 1);
+        this.calculateAmount(newItems);
     }
 
     renderCards() {
@@ -104,13 +136,57 @@ class Content extends Component {
                         </div>
                     </div>
                     <div className='content__items_card-price'>{item.total} руб</div>
-                    <div className='content__items_card-delete'>Удалить</div>
+                    <div className='content__items_card-delete'
+                        onClick={this.deleteItem.bind(this, i)}>x</div>
             </div>)}
+        </div>
+    }
+
+    renderPromoCode() {
+        const { visible, valueInputPromoCode, totalPrice, discount } = this.state;
+
+        let totalPriceWhitPromo = visible ? (totalPrice - discount) : totalPrice;
+
+        if (totalPriceWhitPromo < 0) totalPriceWhitPromo = 0;
+
+        console.log(discount)
+        return <div className='content__promocode'>
+            <div className='content__input-promocode'>
+                <div className='content__have-promocode'>Есть промокод?</div>
+                <input className='content__input'
+                    value={valueInputPromoCode}
+                    onChange={this.onChahgePromoCode.bind(this)}/>
+            </div>
+
+            <div className='content__apply-promocode'>
+                <button className='content__button_apply-promocode'
+                    onClick={this.inputPromoCode.bind(this)}>Применить</button>
+            </div>
+
+            <div className='content__titles-promocode'>
+                <div className='content__amount'>Сумма заказа:</div>
+                { visible
+                        ? <div className='content__visible-promocode'>Промокод:</div>
+                        : ''
+                 }
+
+                <div className='content__amount-total'>Всего:</div>
+            </div>
+
+            <div className='content__total-amount'>
+                <div>{totalPrice}</div>
+                { visible
+                    ? <div className='content__visible-promocode' visible={false}>{discount}</div>
+                    : ''
+                }
+                <div>{totalPriceWhitPromo}</div>
+            </div>
         </div>
     }
 
     render() {
         const items = this.renderCards();
+        const promocode = this.renderPromoCode();
 
         return (
             <div className='content'>
@@ -120,9 +196,7 @@ class Content extends Component {
                    </span>
                 </div>
                 { items }
-                <div className='content__promocode'>
-                    Промокод
-                </div>
+                { promocode }
                 <div className='content__add-items'>
                     Добавьте
                 </div>
