@@ -93,25 +93,59 @@ class Header extends Component {
                      <div className='header__links_phone'>
                         8 (800) 500-75-55 Бесплатный звонок по России
                      </div>
-                    <div className='header__links_stars'>Звездный блог</div>
-                    <div className='header__links_youtube'>Смотрите нас на Youtube</div>
-                    <div className='header__links_live'>Смотрите наш прямой эфир</div>
+                    <div className='header__links_stars'>
+                        <img
+                            className=''
+                            src={`./image/star.png`}
+                            alt="star" />Звездный блог</div>
+                    <div className='header__links_youtube'>
+                        <img
+                            className=''
+                            src={`./image/youtube_link.png`}
+                            alt="youtube" />Смотрите нас на Youtube</div>
+                    <div className='header__links_live'>
+                        <img
+                            className=''
+                            src={`./image/live_stream.png`}
+                            alt="stream" />Смотрите наш прямой эфир</div>
                     </div>
                </div>
 
                <div className='header__main'>
                     <div className='header__main_content'>
                         <div className='header__main_left'>
-                            <div className='header__main_shop24'>shop24</div>
-                            <input
-                                className='header__main_searching'
-                                value={searchInput}
-                                placeholder='Поиск по сайту'
-                                onChange={this.onChangeInput.bind(this)} />
+                            <div className='header__main_shop24'>
+                                <img
+                                    className='content__image'
+                                    src={`./image/shop24.png`}
+                                    alt="shop24" />
+                            </div>
+                            <div className='header__main_searching_cover'>
+                                <input
+                                    className='header__main_searching'
+                                    value={searchInput}
+                                    placeholder='Поиск по сайту'
+                                    onChange={this.onChangeInput.bind(this)} />
+                                <img
+                                    className=''
+                                    src={`./image/search.png`}
+                                    alt="search" />
+                            </div>
                         </div>
                         <div className='header__main_right'>
-                            <div className='header__main_account'>Анастасия</div>
-                            <div className='header__main_trash'>В корзине:<br/>
+                            <div className='header__main_account'>
+                                <img
+                                    className=''
+                                    src={`./image/account.png`}
+                                    alt="account" />
+                                Анастасия
+                            </div>
+                            <div className='header__main_trash'>
+                            <img
+                                className=''
+                                src={`./image/trash.png`}
+                                alt="trash" />
+                            В корзине:<br/>
                                 {items.length}  товара</div>
                         </div>
                     </div>

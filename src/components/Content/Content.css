@@ -143,10 +143,13 @@ input {
 }
 
 .content__input {
-    height: 45px;
-    width: 178px;
-    font-size: 27px;
+   height: 34px;
+   width: 178px;
+   font-size: 18px;
+}
 
+.content__have-promocode {
+    padding-bottom: 8px;
 }
 
 .content__input-promocode,

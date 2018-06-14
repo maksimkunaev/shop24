@@ -43,25 +43,40 @@
 }
 
 .header__main_left,
-.header__main_right {
+.header__main_right,
+.header__main_account,
+.header__main_trash {
     display: flex;
+    align-items: center;
 }
 
-.header__main_left {
-    justify-content: flex-start;
+.header__main_account,
+.header__main_trash {
+    justify-content: space-around;
+    width: 180px;
+    box-sizing: border-box;
+}
+
+.header__main_trash {
+    width: 110px;
 }
 
 .header__main_shop24,
 .header__main_account {
-    padding-right: 30px;
+    padding-right: 70px;
 }
 
-.header__main_right {
-    justify-content: flex-end;
+.header__main_searching_cover {
+    display: flex;
+    width: 226px;
+    font-size: 14px;
+    border-bottom: 1px solid;
+    height: 20px;
 }
+
 .header__main_searching {
+    width: 100%;
     border: none;
-    /*border-bottom: 1px solid;*/
 }
 
 
@@ -109,19 +124,12 @@
     border-bottom: 1px solid #d9d9d9;
 }
 
-/*.header__tabs_woman,
-.header__tabs_man,
-.header__tabs_ornamentation {
-    margin-right: 15px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}*/
-
 .header__links_phone,
 .header__links_stars,
 .header__links_youtube,
 .header__links_live {
+    display: flex;
+    align-items: center;
 }
 
 .header__links_phone {

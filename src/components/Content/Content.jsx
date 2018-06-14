@@ -113,13 +113,15 @@ class Content extends Component {
         newItems.splice(i, 1);
         this.calculateAmount(newItems);
     }
+
     makeOrder() {
 
     }
 
     renderCards() {
         const { items } = this.state;
-        console.log(items[0].image)
+        console.log(items)
+
         return <div className='content__items'>
             <div className='content__items_titles'>
                 <div className='content__items_title'>Товар</div>
@@ -136,7 +138,6 @@ class Content extends Component {
                         <img
                             className='content__image'
                             src={`./image/${item.image}`}
-                            // width="189" height="255"
                             alt="lorem" />
                     </div>
                     <div className='content__items_card-description'>
@@ -156,7 +157,11 @@ class Content extends Component {
                     </div>
                     <div className='content__items_card-price'>{item.total} руб</div>
                     <div className='content__items_card-delete'
-                        onClick={this.deleteItem.bind(this, i)}>x</div>
+                        onClick={this.deleteItem.bind(this, i)}>
+                            <img
+                                className=''
+                                src={`./image/delete.png`}
+                                alt="lorem" /></div>
             </div>)}
         </div>
     }
@@ -180,6 +185,7 @@ class Content extends Component {
                 <div className='content__have-promocode'>Есть промокод?</div>
                 <input className='content__input'
                     value={valueInputPromoCode}
+                    placeholder='Введите промокод'
                     onChange={this.onChahgePromoCode.bind(this)}/>
             </div>
 
