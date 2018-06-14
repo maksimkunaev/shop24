@@ -2,16 +2,80 @@
     height: max-content;
     width: 100%;
     background-color: #2a2a2a;
+    color: #fff;
+}
+
+.footer__social,
+.footer__about_cover {
+    border-bottom: 1px solid #b2b2b2;
 }
 
 .footer__social  {
+    color: #fff;
     height: 84px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.footer__links  {
+.footer__social-links {
+    padding: 5px;
+}
+
+.footer__about_cover {
+    padding: 30px;
     height: 363px;
+    display: flex;
+    width: 100%px;
+    justify-content: center;
 }
 
+.footer__about {
+    width: 1185px;
+    display: flex;
+}
+
+.footer__logo {
+    padding-right: 20px;
+    position: relative;
+    top: -7px;
+}
+
+.footer__about-phones {
+    flex: 1;
+    font-size: 30px;
+}
+
+.footer__about-phone-rf {
+    font-size: 16px;
+}
+
+.footer_info-links {
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_info-block {
+    max-width: 260px;
+}
+
+.footer_info-block-title,
+.footer_info-list {
+    padding-bottom: 14px;
+}
+
+.footer__links {
+    text-decoration: none;
+    color: #fff;
+}
 .footer__copyright  {
     height: 140px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.footer__copyright-text {
+    text-align: center;
 }
