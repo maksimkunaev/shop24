@@ -5,8 +5,10 @@ class Footer extends Component {
 
     render() {
         return (
-            <div className='Footer'>
-               Footer
+            <div className='footer'>
+               <div className='footer__social'>Social</div>
+               <div className='footer__links'>Links</div>
+               <div className='footer__copyright'>Copyright</div>
             </div>
         )
     }

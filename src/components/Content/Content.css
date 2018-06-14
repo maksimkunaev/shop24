@@ -13,6 +13,7 @@ input {
     margin: 0 auto;
     box-sizing: border-box;
     align-items: center;
+    padding-bottom: 70px;
 }
 .content__header {
     background-color: #fff;
@@ -21,13 +22,13 @@ input {
     display: flex;
     justify-content: center;
     position: relative;
-    border-bottom: 1px solid #3e3e3e;
+    border-bottom: 2px solid #d9d9d9;
 }
 
 .content__header-title {
     position: absolute;
-    bottom: -13px;
-    padding: 3px;
+    bottom: -20px;
+    padding: 9px;
     background-color: #fff;
 }
 .content__items {
@@ -70,7 +71,7 @@ input {
 .content__items_card {
     height: 180px;
     width: 100%;
-    /*border: 1px solid #ccc;*/
+    padding-bottom: 25px;
     display: flex;
 }
 
@@ -100,6 +101,7 @@ input {
 
 .content__items_card-description {
     flex: 2;
+    padding-left: 15px;
 }
 
 .content_card-title,
@@ -141,6 +143,10 @@ input {
 }
 
 .content__input {
+    height: 45px;
+    width: 178px;
+    font-size: 27px;
+
 }
 
 .content__input-promocode,
@@ -150,6 +156,10 @@ input {
     flex: 1;
 }
 
+.content__input-promocode {
+    top: -23px;
+    position: relative;
+}
 
 .content__apply-promocode {
     flex: 2;
@@ -222,6 +232,6 @@ input {
 
 .content__add-items-card {
     width: 277px;
-    background-color: #ccc;
+    height: max-content;
 }
 

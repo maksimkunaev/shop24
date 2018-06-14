@@ -61,7 +61,7 @@
 }
 .header__main_searching {
     border: none;
-    border-bottom: 1px solid;
+    /*border-bottom: 1px solid;*/
 }
 
 
@@ -73,8 +73,8 @@
 .header__category {
     height: 52px;
     background-color: #f8f8f8;
-    border-bottom: 1px solid #a2a2a2;
-    border-top: 1px solid #a2a2a2;
+    border-bottom: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
 }
 
 .header__category_clothes,
@@ -82,8 +82,14 @@
 .header__category_ornamentation,
 .header__category_beauty,
 .header__category_household,
-.header__category_kitchen {
+.header__category_kitchen,
+.header__tabs_woman,
+.header__tabs_man,
+.header__tabs_ornamentation {
     margin-right: 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .header__category_clothes {}
@@ -94,19 +100,23 @@
 .header__category_kitchen {}
 
 .choosen__tab {
-    border-bottom: 1px solid red;
+    border-bottom: 3px solid #ff6c00;
 }
 
 .header__tabs {
     height: 42px;
     background-color: #fff;
-    border-bottom: 1px solid #a2a2a2;
+    border-bottom: 1px solid #d9d9d9;
 }
 
-.header__tabs_woman,
-.header__tabs_man {
+/*.header__tabs_woman,
+.header__tabs_man,
+.header__tabs_ornamentation {
     margin-right: 15px;
-}
+    height: 100%;
+    display: flex;
+    align-items: center;
+}*/
 
 .header__links_phone,
 .header__links_stars,

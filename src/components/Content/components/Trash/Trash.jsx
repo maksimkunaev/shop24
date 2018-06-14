@@ -1,6 +1,7 @@
 import React from 'react';
+import './Trash.css';
 
-const renderAddToYourTrash = ({}) => {
+const renderAddToYourTrash = ({info}) => {
 
 
 
@@ -10,49 +11,19 @@ const renderAddToYourTrash = ({}) => {
             </div>
 
             <div className='content__cards-add-items'>
-                <div className='content__add-items-card'>
+                {info.map((item, i) => <div className='content__add-items-card'
+                    key={i}>
                     <img
                         className='content__image'
-                        src={`./image/dress1.jpg`}
-                        // width="360"
+                        src={`./image/${item.image}`}
                         height="360"
                         alt="lorem" />
-                    <div className=''>Солнечные очки зеленого цвета в стиле ретро<br /> 2450 руб</div>
+                    <div className='content__image-title-price'>
+                        <div className='content__image-title'>{item.title}</div>
+                        <div className=''>{item.price}</div>
+                    </div>
+                </div>)}
 
-                </div>
-
-                <div className='content__add-items-card'>
-                    <img
-                        className='content__image'
-                        src={`./image/dress1.jpg`}
-                        // width="360"
-                        height="360"
-                        alt="lorem" />
-                    <div className=''>Солнечные очки зеленого цвета в стиле ретро<br /> 2450 руб</div>
-
-                </div>
-
-                <div className='content__add-items-card'>
-                    <img
-                        className='content__image'
-                        src={`./image/dress1.jpg`}
-                        // width="360"
-                        height="360"
-                        alt="lorem" />
-                    <div className=''>Солнечные очки зеленого цвета в стиле ретро<br /> 2450 руб</div>
-
-                </div>
-
-                <div className='content__add-items-card'>
-                    <img
-                        className='content__image'
-                        src={`./image/dress1.jpg`}
-                        // width="360"
-                        height="360"
-                        alt="lorem" />
-                    <div className=''>Солнечные очки зеленого цвета в стиле ретро<br /> 2450 руб</div>
-
-                </div>
             </div>
         </div>
     }
