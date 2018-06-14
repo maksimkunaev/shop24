@@ -11,13 +11,22 @@ const itemsFromTrash = [
     {code: '75039', title: 'Платье-миди', size: 44, color: 'белый', price: 2450, image: 'dress4.jpg'},
 ];
 
+const addToYourTrash = [
+    {title: 'Платье-миди с расклешенной юбкой', price: 2450, image: 'dress1.jpg'},
+    {title: 'Платье-миди с расклешенной юбкой', price: 2450, image: 'dress1.jpg'},
+    {title: 'Солнечные очки зеленого цвета в стиле ретро', price: 2450, image: 'dress3.jpg'},
+    {title: 'Шляпа', price: 800, image: 'dress4.jpg'},
+];
+
+
+
 class App extends Component {
 
     render() {
         return (
             <div className='App'>
-                <Header itemsFromTrash={itemsFromTrash}/>
-                <Content itemsFromTrash={itemsFromTrash}/>
+                <Header itemsFromTrash={itemsFromTrash} />
+                <Content itemsFromTrash={itemsFromTrash} addToYourTrash={addToYourTrash} />
                 <Footer />
             </div>
         )

@@ -1,3 +1,7 @@
+button,
+input {
+    outline: none;
+}
 .content,
 .content__items {
     display: flex;
@@ -5,7 +9,7 @@
     height: 100%;
 }
 .content {
-    width: 1000px;
+    width: 1185px;
     margin: 0 auto;
     box-sizing: border-box;
     align-items: center;
@@ -79,13 +83,21 @@
     flex: 1;
 }
 
+.content__items_card-image,
+.content__image {
+
+}
+
 .content__items_card-image {
     width: 100px;
     height: 100%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-image: url('./dress1.jpg');
 }
+
+.content__image {
+    width: 100%;
+    height: 100%;
+}
+
 .content__items_card-description {
     flex: 2;
 }
@@ -128,6 +140,8 @@
     justify-content: space-between;
 }
 
+.content__input {
+}
 
 .content__input-promocode,
 .content__apply-promocode,
@@ -175,3 +189,39 @@
 .content__total-amount-discount {
     margin-bottom: 32px;
 }
+
+.content__add-items {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content__add-items-text-field {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-top: 1px solid #a2a2a2;
+    width: 100%;
+    height: 50px;
+}
+
+.content__add-items-text {
+    position: absolute;
+    padding: 15px;
+    height: 20px;
+    background-color: #fff;
+    top: -25px;
+}
+
+.content__cards-add-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content__add-items-card {
+    width: 277px;
+    background-color: #ccc;
+}
+

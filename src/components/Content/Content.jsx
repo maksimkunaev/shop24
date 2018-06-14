@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Content.css'
 import cn from 'classnames';
+import Trash from './components/Trash';
 
 class Content extends Component {
     constructor(props) {
@@ -129,8 +130,14 @@ class Content extends Component {
             </div>
             {items.map((item, i) => <div className='content__items_card'
                 key={item.id}>
-                    <div className='content__items_card-image'>
-
+                    <div
+                    className='content__items_card-image'
+                        >
+                        <img
+                            className='content__image'
+                            src={`./image/${item.image}`}
+                            // width="189" height="255"
+                            alt="lorem" />
                     </div>
                     <div className='content__items_card-description'>
                         <div className='content_card-title'>{item.title}</div>
@@ -199,6 +206,7 @@ class Content extends Component {
     }
 
     render() {
+        const { addToYourTrash } = this.props;
         const items = this.renderCards();
         const promocode = this.renderPromoCode();
 
@@ -211,9 +219,7 @@ class Content extends Component {
                 </div>
                 { items }
                 { promocode }
-                <div className='content__add-items'>
-                    Добавьте
-                </div>
+                <Trash info={addToYourTrash} />
             </div>
         )
     }
