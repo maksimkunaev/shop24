@@ -35,8 +35,8 @@ class Footer extends Component {
                     <a href='#' className='footer__links'>
                         {item.title}</a>
                     </div>
-                        {item.list.map((item, i) => <div className='footer_info-list'>
-                            <a href='#' key={i} className='footer__links'>{item}</a>
+                        {item.list.map((item, i) => <div key={i} className='footer_info-list'>
+                            <a href='#' className='footer__links'>{item}</a>
                     </div>)}
                 </div>)}
          </div>

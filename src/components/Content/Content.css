@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 button,
 input {
     outline: none;
@@ -9,6 +11,7 @@ input {
     height: 100%;
 }
 .content {
+    font-family: 'Roboto', sans-serif;
     width: 1185px;
     margin: 0 auto;
     box-sizing: border-box;

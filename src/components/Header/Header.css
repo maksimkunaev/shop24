@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .header,
 .header__links,
 .header__main,
 .header__category,
 .header__tabs {
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     margin: 0 auto;
     align-items: center;

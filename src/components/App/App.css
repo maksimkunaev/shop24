@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
 .App {
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    max-width: 2500px;
+    max-width: 2000px;
     margin: 0 auto;
 }
 
