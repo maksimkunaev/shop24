@@ -107,13 +107,6 @@
     align-items: center;
 }
 
-.header__category_clothes {}
-.header__category_shoes {}
-.header__category_ornamentation {}
-.header__category_beauty {}
-.header__category_household {}
-.header__category_kitchen {}
-
 .choosen__tab {
     border-bottom: 3px solid #ff6c00;
 }
@@ -135,14 +128,8 @@
 .header__links_phone {
     flex: 1;
 }
-.header__links_stars {
-    padding-right: 12px;
-}
 
+.header__links_stars,
 .header__links_youtube {
     padding-right: 12px;
-}
-
-.header__links_live {
-
 }

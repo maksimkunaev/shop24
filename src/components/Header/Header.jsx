@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Header.css';
-import bind from 'decko';
 import cn from 'classnames';
 
 const categories = [
@@ -30,7 +29,6 @@ class Header extends Component {
         }
     }
 
-    // @bind
     onChangeInput(event) {
         this.setState({
             searchInput: event.target.value
