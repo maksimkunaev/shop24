@@ -183,6 +183,17 @@ input {
     border: none;
     color: #fff;
     background-color: #b7b7b7;
+    transition: all 0.05s ease-out;
+}
+
+.content__button_apply-promocode:active {
+    background-color: #e6e4e4;
+    box-shadow: 0 0 10px rgba(0,0,0, .7);
+}
+
+.content__button_make-order:active {
+    background-color: #ffd8bc;
+    box-shadow: 0 0 10px rgba(0,0,0, .7);
 }
 
 .content__invisible-promocode {
@@ -229,7 +240,6 @@ input {
 
 .content__cards-add-items {
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 

@@ -3,12 +3,12 @@ import './Footer.css'
 
 const links = [
     {title: 'vk', image: 'vk.png'},
-    {title: 'vk', image: 'fb.png'},
-    {title: 'vk', image: 'ok.png'},
-    {title: 'vk', image: 'r.png'},
-    {title: 'vk', image: 'heart.png'},
-    {title: 'vk', image: 'instagram.png'},
-    {title: 'vk', image: 'youtube.png'},
+    {title: 'fb', image: 'fb.png'},
+    {title: 'ok', image: 'ok.png'},
+    {title: 'r', image: 'r.png'},
+    {title: 'heart', image: 'heart.png'},
+    {title: 'instagram', image: 'instagram.png'},
+    {title: 'youtube', image: 'youtube.png'},
 ]
 
 const info = [

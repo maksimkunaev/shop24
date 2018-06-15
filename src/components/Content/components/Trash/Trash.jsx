@@ -3,8 +3,6 @@ import './Trash.css';
 
 const renderAddToYourTrash = ({info}) => {
 
-
-
         return <div className='content__add-items'>
             <div className='content__add-items-text-field'>
                 <div className='content__add-items-text'>Добавьте к Вашему заказу</div>
