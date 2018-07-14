@@ -50,7 +50,6 @@ class Footer extends Component {
         return (
             <div className='footer'>
                 {links}
-
                <div className='footer__about_cover'>
                    <div className='footer__about'>
                         <img className='footer__logo' width='100' height='100' src={`./image/logo.png`} alt='logo.png' />
@@ -61,12 +60,9 @@ class Footer extends Component {
                                 <span>*</span>Бесплатный  звонок по всей России</div>
                             <div className='footer__about-phone'>8 (495) 733-96-03</div>
                         </div>
-
                         {info}
                     </div>
                </div>
-
-
                <div className='footer__copyright'>
                     <div className='footer__copyright-text'>
                         Copyright © Товар ООО «Стиль и Мода», 2014-2016. Все права защищены.<br/>

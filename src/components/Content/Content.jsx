@@ -114,13 +114,8 @@ class Content extends Component {
         this.calculateAmount(newItems);
     }
 
-    makeOrder() {
-
-    }
-
     renderCards() {
         const { items } = this.state;
-        console.log(items)
 
         return <div className='content__items'>
             <div className='content__items_titles'>
@@ -205,8 +200,7 @@ class Content extends Component {
                 <div>{totalPrice}</div>
                 <div className={classes}>{discount}</div>
                 <div className='content__total-amount-discount'>{totalPriceWhitPromo}</div>
-                <button className='content__button_make-order'
-                    onClick={this.makeOrder.bind(this)}>Оформить заказ</button>
+                <button className='content__button_make-order'>Оформить заказ</button>
             </div>
         </div>
     }
