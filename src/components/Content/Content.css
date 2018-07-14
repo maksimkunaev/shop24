@@ -85,11 +85,6 @@ input {
     flex: 1;
 }
 
-.content__items_card-image,
-.content__image {
-
-}
-
 .content__items_card-image {
     width: 100px;
     height: 100%;
